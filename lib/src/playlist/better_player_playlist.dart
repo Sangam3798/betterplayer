@@ -55,6 +55,8 @@ class BetterPlayerPlaylistState extends State<BetterPlayerPlaylist> {
 
   @override
   void dispose() {
+    _betterPlayerPlaylistController!.betterPlayerController!.videoPlayerController!.pause();
+    _betterPlayerPlaylistController!.betterPlayerController!.videoPlayerController!.dispose();
     _betterPlayerPlaylistController!.dispose();
     super.dispose();
   }
